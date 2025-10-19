@@ -1,0 +1,71 @@
+\documentclass[twocolumn]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{microtype}
+\usepackage{lipsum,blindtext}
+\usepackage{abstract}     
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=black, citecolor=black}
+
+\usepackage[style=apa,backend=biber]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{refs.bib}
+
+\newcommand{\keywords}[1]{\par\noindent\textbf{Palabras clave:} #1}
+
+\title{Insertar Titulo}
+\author{
+    Mathias Hualtibamba, Giorgio Mancusi y Fabio Osorio \\
+    Universidad Peruana de Ciencias Aplicadas \\
+    Curso: Complex Networks \\
+    2025-2 
+}
+\date{12 de octubre de 2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\blindtext[1]
+\keywords{redes complejas, comunidades, centralidad, difusión, análisis estructural}
+\end{abstract}
+
+\section{Introduccion}
+\blindtext[2]
+
+\section{Metodologia}
+\blindtext[3]
+
+\subsection{Datos}
+\blindtext[1]
+
+\subsection{Construccion de la red}
+\blindtext[1]
+
+\subsection{Analisis y Metricas}
+\blindtext[1]
+
+\subsection{Herramientas}
+\blindtext[1]
+
+\section{Resultados}
+\blindtext[4]
+
+\section{Discusion}
+\blindtext[2]
+
+\section{Conclusiones}
+\blindtext[2]
+
+\section{Referencias}
+\printbibliography
+
+\section{Anexos}
+\blindtext[1
+]
+\end{document}
