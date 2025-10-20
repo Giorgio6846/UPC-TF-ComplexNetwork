@@ -9,6 +9,8 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{hyperref}
+\usepackage{float}
+
 \hypersetup{colorlinks=true, urlcolor=blue, linkcolor=black, citecolor=black}
 
 \usepackage[style=apa,backend=biber]{biblatex}
@@ -49,14 +51,41 @@ Los grafos permiten modelar y analizar sistemas reales de manera abstracta, faci
 A través de la teoría de grafos, es posible identificar la arquitectura oculta de un sistema complejo, estudiar sus propiedades estructurales y comprender su comportamiento global. 
 Matemáticamente, un grafo puede representarse mediante una matriz de adyacencia, donde cada elemento $a_{ij}$ indica la existencia (y, en redes ponderadas, la intensidad) de la conexión entre los nodos $i$ y $j$.
 
-
 \section{Metodologia}
-\blindtext[3]
-
 \subsection{Datos}
 El conjunto de datos utilizado está conformado por seis columnas: \textit{Año}, \textit{Persona}, \textit{Tipo de servicio}, \textit{Nombre de la tarea}, \textit{Modalidad} y \textit{Complejidad}. 
 El dataset cuenta con un total de 10,384 registros, de los cuales aproximadamente 3,600 correspondían a duplicados. 
-Estos registros duplicados fueron eliminados durante la etapa de limpieza, dado que no aportaban información adicional a la estructura del grafo y su presencia incrementaba innecesariamente el costo computacional en la construcción y análisis de la red.
+Estos registros fueron eliminados durante la etapa de limpieza, dado que no aportaban información adicional a la estructura del grafo y su presencia incrementaba innecesariamente el costo computacional en la construcción y análisis de la red. 
+
+\subsection{Analisis Exploratorio de los datos - EDA}
+Despues de eliminar los 3,600 registros duplicados, se observó que las columnas \textit{Tipo de servicio} y \textit{Nombre de la tarea} presentaban la siguiente distribución:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{img/DistribucionTipoServicio.png}
+    \caption{Distribución del TIPO DE SERVICIO.}
+    \label{fig:distribucion_tipo_servicio}
+\end{figure}
+
+Los servicios \textit{1} y \textit{2} concentraron la mayor parte de los datos, representando aproximadamente el 40\% cada uno, como se muestra en la Figura~\ref{fig:distribucion_tipo_servicio}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{img/DistribucionNombreTarea.png}
+    \caption{Distribución del NOMBRE DE LA TAREA (80\% + Otros).}
+    \label{fig:distribucion_nombre_tarea}
+\end{figure}
+
+De manera similar, las tareas \textit{2.2} y \textit{1.1} representaron alrededor del 30\% cada una, como se observa en la Figura~\ref{fig:distribucion_nombre_tarea}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{img/RelacionComplejidadModalidad.png}
+    \caption{Relacion entre Complejidad y Modalidad}
+    \label{fig:relacion_complejidadymodalidad}
+\end{figure}
+
+Por otro lado, la relación entre la \textit{complejidad} y la \textit{modalidad} de las tareas mostró que las tareas de baja complejidad en modalidad virtual concentraron la mayor proporción del conjunto de datos, como se aprecia en la Figura~\ref{fig:relacion_complejidadymodalidad}.
 
 \subsection{Construccion de la red}
 \blindtext[1]
