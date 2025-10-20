@@ -17,7 +17,7 @@
 
 \newcommand{\keywords}[1]{\par\noindent\textbf{Palabras clave:} #1}
 
-\title{Insertar Titulo}
+\title{Robustez y resilencia de la red comparativa}
 \author{
     Mathias Hualtibamba, Giorgio Mancusi y Fabio Osorio \\
     Universidad Peruana de Ciencias Aplicadas \\
@@ -32,7 +32,7 @@
 
 \begin{abstract}
 \blindtext[1]
-\keywords{redes complejas, comunidades, centralidad, difusión, análisis estructural}
+\keywords{redes complejas, comparativas, analisis de resilencia}
 \end{abstract}
 
 \section{Introduccion}
@@ -42,7 +42,9 @@
 \blindtext[3]
 
 \subsection{Datos}
-\blindtext[1]
+El conjunto de datos utilizado está conformado por seis columnas: \textit{Año}, \textit{Persona}, \textit{Tipo de servicio}, \textit{Nombre de la tarea}, \textit{Modalidad} y \textit{Complejidad}. 
+El dataset cuenta con un total de 10,384 registros, de los cuales aproximadamente 3,600 correspondían a duplicados. 
+Estos registros duplicados fueron eliminados durante la etapa de limpieza, dado que no aportaban información adicional a la estructura del grafo y su presencia incrementaba innecesariamente el costo computacional en la construcción y análisis de la red.
 
 \subsection{Construccion de la red}
 \blindtext[1]
@@ -51,15 +53,20 @@
 \blindtext[1]
 
 \subsection{Herramientas}
-\blindtext[1]
+Las herramientas utilizadas para la creacion del grafo fueron los siguentes:
+\begin{itemize}
+    \item Python 3.13
+    \item NetworkX
+    \item Pandas
+    \item VSCode
+\end{itemize}
 
 \section{Resultados}
 \blindtext[4]
 
-\section{Referencias}
 \printbibliography
 
 \section{Anexos}
-\blindtext[1
-]
+El codigo, notebook y datos se encuentran en el siguente repositorio \parencite{repoCodigo}
+
 \end{document}
