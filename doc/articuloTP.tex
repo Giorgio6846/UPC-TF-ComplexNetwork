@@ -19,7 +19,7 @@
 
 \newcommand{\keywords}[1]{\par\noindent\textbf{Palabras clave:} #1}
 
-\title{Robustez y resilencia de la red comparativa}
+\title{Robustez y resiliencia de una red comparativa de servicios}
 \author{
     Mathias Hualtibamba, Giorgio Mancusi y Fabio Osorio \\
     Universidad Peruana de Ciencias Aplicadas \\
@@ -34,16 +34,16 @@
 
 \begin{abstract}
 \blindtext[1]
-\keywords{redes complejas, comparativas, analisis de resilencia, grafos}
+\keywords{redes complejas, comparativas, analisis de resiliencia, grafos}
 \end{abstract}
 
-\section{Introduccion}
+\section{Introducción}
 \blindtext[2]
 
 \section{Marco Teorico}
 \subsection{Redes Complejas}
-Segun \cite{ding2025comprehensivesurveyartificialintelligence}, las redes complejas constituyen una repsentacion abstracta de sistemas reales formados por multiples componentes interconectados. 
-Este tipo de redes puede describir entre los reacciones quimicas hasta las conexiones entre paginas web. Su estudio permite indentificar patrones globales de comportamiento a nivel macro, como las formacion de comunidades o estructuras, mientras que a nivel micro reflejan el desorden y heterogeneidad característicos de los sistemas reales.
+Según \cite{ding2025comprehensivesurveyartificialintelligence}, las redes complejas constituyen una representación abstracta de sistemas reales formados por múltiples componentes interconectados. 
+Este tipo de redes puede describir entre los reacciones quimicas hasta las conexiones entre paginas web. Su estudio permite identificar patrones globales de comportamiento a nivel macro, como la formación de comunidades o estructuras, mientras que a nivel micro reflejan el desorden y la heterogeneidad característicos de los sistemas reales.
 
 \subsection{Grafos}
 Según \textcite{Zamora_L_pez_2024}, un grafo es una estructura matemática compuesta por un conjunto de vértices (o nodos) y un conjunto de aristas (o enlaces) que representan las relaciones entre dichos vértices. 
@@ -58,7 +58,7 @@ El dataset cuenta con un total de 10,384 registros, de los cuales aproximadament
 Estos registros fueron eliminados durante la etapa de limpieza, dado que no aportaban información adicional a la estructura del grafo y su presencia incrementaba innecesariamente el costo computacional en la construcción y análisis de la red. 
 
 \subsection{Analisis Exploratorio de los datos - EDA}
-Despues de eliminar los 3,600 registros duplicados, se observó que las columnas \textit{Tipo de servicio} y \textit{Nombre de la tarea} presentaban la siguiente distribución:
+Después de eliminar los 3,600 registros duplicados, se observó que las columnas \textit{Tipo de servicio} y \textit{Nombre de la tarea} presentaban la siguiente distribución:
 
 \begin{figure}[H]
     \centering
@@ -88,7 +88,14 @@ De manera similar, las tareas \textit{2.2} y \textit{1.1} representaron alrededo
 Por otro lado, la relación entre la \textit{complejidad} y la \textit{modalidad} de las tareas mostró que las tareas de baja complejidad en modalidad virtual concentraron la mayor proporción del conjunto de datos, como se aprecia en la Figura~\ref{fig:relacion_complejidadymodalidad}.
 
 \subsection{Construccion de la red}
-\blindtext[1]
+Se contruyo una red bipartita modelando la relacion entre clientes y servicio. Esta estructura permite representar la interaccion entre dos conjuntos las personas y los servicioss solicitados. Cada conexion muestra un cliente ha solicitado un servicio.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{img/Grafo.png}
+    \caption{Grafo de Relacion entre persona y servicio}
+    \label{fig:Grafo}
+\end{figure}
 
 \subsection{Analisis y Metricas}
 \blindtext[1]
